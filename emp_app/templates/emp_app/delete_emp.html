@@ -1,0 +1,22 @@
+{% extends 'emp_app/base.html' %}
+{% block content %}
+<div class="container">
+    <h1>Delete an employee</h1>
+    <hr>
+    
+</div>
+<div class="dropdown container">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Remove Employee
+    </button>
+    <ul class="dropdown-menu">
+        {% for emp in emps %}
+        <li><a class="dropdown-item" href="{{emp.id}}/">{{emp.first_name}}</a></li>
+        {% endfor %}
+      
+      
+    </ul>
+  </div>
+
+
+{% endblock content %}

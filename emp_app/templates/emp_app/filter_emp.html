@@ -1,0 +1,16 @@
+{% extends 'emp_app/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <div class="container">
+        <h1>Add an employee</h1>
+        <hr />
+        <form method="POST" action="">
+          {% csrf_token %} 
+          {{form|crispy}}
+          <br>
+          <input type="submit" name="Update Task" />
+        </form>
+      </div>
+
+{% endblock content %}
